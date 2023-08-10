@@ -91,7 +91,7 @@
        &none       &kp V       &kp G        &kp H        &kp F   &kp K                                                                   &kp MINUS        &kp U        &kp O       &kp Y       &kp W        &none
        &none  &hm LGUI R  &hm LALT S  &hm LCTRL N  &hm LSHFT T   &kp P                                                                       &kp J  &hm RSHFT A  &hm RCTRL E  &hm RALT I  &hm RGUI C        &none
        &none       &kp X       &kp M        &kp L        &kp D   &kp B    &none        &none    &none       &none        &none    &none   &kp FSLH     &kp LPAR     &kp RPAR     &kp DQT     &kp SQT        &none
-       &none       &none       &none        &none        &none          &kp TAB  &lt 3 COMMA  &kp DOT  &lt 1 BSPC  &lt 3 SPACE  &kp RET                   &none        &none       &none       &none        &none
+       &none       &none       &none        &none        &none          &kp TAB  &lt 2 COMMA  &kp DOT  &lt 1 BSPC  &lt 3 SPACE  &kp RET                   &none        &none       &none       &none        &none
             >;
         };
 
