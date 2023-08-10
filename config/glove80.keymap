@@ -27,78 +27,15 @@
 / {
     /* Glove80 system behavior & macros */
     behaviors {
-        // For the "layer" key, it'd nice to be able to use it as either a shift or a toggle.
-        // Configure it as a tap dance, so the first tap (or hold) is a &mo and the second tap is a &to
-        lower: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "LAYER_TAP_DANCE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&mo 1>, <&to 1>;
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
-    };
-
-    macros {
-        rgb_ug_status_macro: rgb_ug_status_macro_0 {
-            label = "RGB_UG_STATUS";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&rgb_ug RGB_STATUS>;
-        };
-    };
-
-    macros {
-        bt_0: bt_profile_macro_0 {
-            label = "BT_0";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 0>;
-        };
-    };
-
-    macros {
-        bt_1: bt_profile_macro_1 {
-            label = "BT_1";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 1>;
-        };
-    };
-
-    macros {
-        bt_2: bt_profile_macro_2 {
-            label = "BT_2";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 2>;
-        };
-    };
-
-    macros {
-        bt_3: bt_profile_macro_3 {
-            label = "BT_3";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&out OUT_BLE>,
-                  <&bt BT_SEL 3>;
-        };
-    };
-
-    magic: magic_hold_tap {
-        compatible = "zmk,behavior-hold-tap";
-        label = "MAGIC_HOLD_TAP";
-        #binding-cells = <2>;
-        flavor = "tap-preferred";
-        tapping-term-ms = <200>;
-        bindings = <&mo>, <&rgb_ug_status_macro>;
     };
 
 /* Use these key positions for Hold Tap hold-trigger-key-positions and Combos
@@ -152,7 +89,7 @@
  &bootloader       &none       &none        &none        &none                                                                                            &none        &none       &none       &none  &bootloader
        &none       &none       &none        &none        &none   &none                                                                       &none        &none        &none       &none       &none        &none
        &none       &kp V       &kp G        &kp H        &kp F   &kp K                                                                   &kp MINUS        &kp U        &kp O       &kp Y       &kp W        &none
-       &none  &mt LGUI R  &mt LALT S  &mt LCTRL N  &mt LSHFT T   &kp P                                                                       &kp J  &mt RSHFT A  &mt RCTRL E  &mt RALT I  &mt RGUI C        &none
+       &none  &hm LGUI R  &hm LALT S  &hm LCTRL N  &hm LSHFT T   &kp P                                                                       &kp J  &hm RSHFT A  &hm RCTRL E  &hm RALT I  &hm RGUI C        &none
        &none       &kp X       &kp M        &kp L        &kp D   &kp B    &none        &none    &none       &none        &none    &none   &kp FSLH     &kp LPAR     &kp RPAR     &kp DQT     &kp SQT        &none
        &none       &none       &none        &none        &none          &kp TAB  &lt 3 COMMA  &kp DOT  &lt 1 BSPC  &lt 3 SPACE  &kp RET                   &none        &none       &none       &none        &none
             >;
