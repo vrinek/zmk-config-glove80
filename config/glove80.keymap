@@ -36,6 +36,16 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
 /* Use these key positions for Hold Tap hold-trigger-key-positions and Combos
@@ -89,7 +99,7 @@
  &bootloader       &none       &none        &none        &none                                                                                            &none        &none       &none       &none  &bootloader
        &none       &none       &none        &none        &none   &none                                                                       &none        &none        &none       &none       &none        &none
        &none       &kp V       &kp G        &kp H        &kp F   &kp K                                                                   &kp MINUS        &kp U        &kp O       &kp Y       &kp W        &none
-       &none  &hm LGUI R  &hm LALT S  &hm LCTRL N  &hm LSHFT T   &kp P                                                                       &kp J  &hm RSHFT A  &hm RCTRL E  &hm RALT I  &hm RGUI C        &none
+       &none  &bhm LGUI R  &bhm LALT S  &bhm LCTRL N  &bhm LSHFT T   &kp P                                                                       &kp J  &bhm RSHFT A  &bhm RCTRL E  &bhm RALT I  &bhm RGUI C        &none
        &none       &kp X       &kp M        &kp L        &kp D   &kp B      &kp TAB    &none   &none   &none        &none      &kp RET    &kp FSLH     &kp LPAR     &kp RPAR     &kp DQT     &kp SQT        &none
        &none       &none       &none        &none        &none          &lt 2 COMMA  &kp DOT   &none   &none   &lt 1 BSPC  &lt 3 SPACE                    &none        &none       &none       &none        &none
             >;
