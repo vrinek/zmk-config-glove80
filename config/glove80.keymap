@@ -46,6 +46,15 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
+        am: auto_mod {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <250>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
     };
 
 /* Use these key positions for Hold Tap hold-trigger-key-positions and Combos
@@ -100,7 +109,7 @@
        &none       &none       &none        &none        &none   &none                                                                       &none        &none        &none       &none       &none        &none
        &none       &kp V       &kp G        &kp H        &kp F   &kp K                                                                   &kp MINUS        &kp U        &kp O       &kp Y       &kp W        &none
        &none  &bhm LGUI R  &bhm LALT S  &bhm LCTRL N  &bhm LSHFT T   &kp P                                                               &kp J  &bhm RSHFT A  &bhm RCTRL E  &bhm RALT I  &bhm RGUI C        &none
-       &none       &kp X       &kp M        &kp L        &kp D   &kp B      &kp TAB    &none   &none   &none        &none      &kp RET    &kp FSLH     &kp LPAR     &kp RPAR     &kp DQT     &kp SQT        &none
+       &none    &am LA(X) X    &kp M        &kp L        &kp D   &kp B      &kp TAB    &none   &none   &none        &none      &kp RET    &kp FSLH     &kp LPAR     &kp RPAR     &kp DQT     &kp SQT        &none
        &none       &none       &none        &none        &none          &lt 2 COMMA  &kp DOT   &none   &none   &lt 1 BSPC  &lt 3 SPACE                    &none        &none       &none       &none        &none
             >;
         };
