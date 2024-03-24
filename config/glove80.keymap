@@ -106,7 +106,7 @@
         layer_alpha {
             bindings = <
  &bootloader       &none       &none        &none        &none                                                                                            &none        &none       &none       &none  &bootloader
-       &none       &none       &none        &none        &none   &none                                                                       &none        &none        &none       &none       &none        &none
+       &none       &none       &none        &none        &none   &to 4                                                                       &none        &none        &none       &none       &none        &none
        &none       &kp V       &kp G        &kp H        &kp F   &kp K                                                                   &kp MINUS        &kp U        &kp O       &kp Y       &kp W        &none
        &none  &bhm LGUI R  &bhm LALT S  &bhm LCTRL N  &bhm LSHFT T   &kp P                                                               &kp J  &bhm RSHFT A  &bhm RCTRL E  &bhm RALT I  &bhm RGUI C        &none
        &none    &am LA(X) X    &kp M        &kp L        &kp D   &kp B      &kp TAB    &none   &none   &none        &none      &kp RET    &kp FSLH     &kp LPAR     &kp RPAR     &kp DQT     &kp SQT        &none
@@ -153,7 +153,7 @@
   &none    &none    &none  &none  &none  &none                                                   &none  &none  &none  &none  &none  &none
   &none   &kp TAB   &kp Q  &kp W  &kp E  &kp R                                                   &none  &none  &none  &none  &none  &none
   &none  &kp LCTRL  &kp A  &kp S  &kp D  &kp F                                                   &none  &none  &none  &none  &none  &none
-  &none  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V    &none    &none  &none    &none  &none  &none  &none  &none  &none  &none  &none  &none
+  &none  &kp LSHFT  &kp Z  &kp X  &kp C  &kp V    &to 0    &none  &none    &none  &none  &none  &none  &none  &none  &none  &none  &none
   &none    &none    &none  &none  &none         &kp SPACE  &none  &none    &none  &none  &none         &none  &none  &none  &none  &none
             >;
         };
